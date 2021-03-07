@@ -1,0 +1,19 @@
+<!-- {{listCountry | json}}} -->
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">País</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Población</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of listCountry">
+        <td>{{country.name | titlecase}}</td>
+        <td>{{country.capital | titlecase}}</td>
+        <td>{{country.poblation}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

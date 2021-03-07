@@ -1,0 +1,28 @@
+<!-- {{listCountry | json}}} -->
+<div class="container">
+  <h1 class="text-center mt-5 mb-3">Country List</h1>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">País</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Población</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countryList">
+        <td>{{ country.alpha3Code | uppercase }}</td>
+        <td>{{ country.name | titlecase }}</td>
+        <td>{{ country.capital | titlecase }}</td>
+        <td>{{ country.population }}</td>
+        <td>
+          <button (click)="goDetail(country)" class="btn btn-info">
+            Ver detalle
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
